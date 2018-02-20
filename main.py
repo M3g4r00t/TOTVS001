@@ -28,14 +28,12 @@ df = df['total_value'].resample('D').sum()
 df = pd.DataFrame(df)
 df = df.fillna(0)
 
-pprint(df.head())
-
 df.to_csv('sample.csv')
 
 '''Analyze stationary behavior'''
 
 plt.plot(df)
-# plt.show()
+plt.show()
 
 '''Extract relevant feature'''
 
